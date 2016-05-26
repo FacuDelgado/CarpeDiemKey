@@ -1,0 +1,115 @@
+<div class=" banner-buying">
+    <div class=" container">
+    <h3><span>Propiedades</span></h3>     
+    </div>
+</div>
+<div class="single">
+    <div class="container">
+<div class="price">
+        <div class="price-grid">
+            <div class="col-sm-6 price-top">
+                <h4>Ubicacion</h4>
+                <select class="in-drop">
+                    <option>Todas</option>
+                    <option>Ezeiza</option>
+                    <option>Monte Grande</option>
+                    <option>Lomas de Zamora</option>
+                    <option>Cañuelas</option>
+                    <option>Capital Federal</option>
+                    <option>Lanus</option>
+                    <option>Bandfield</option>
+                    <option>Ciudad Evita</option>
+                </select>
+            </div>
+            <div class="col-sm-6 price-top">
+                <h4>Tipo de propiedad</h4>
+                <select class="in-drop">
+                    <option>Todos</option>
+                    <option>Departamento</option>
+                    <option>Casa</option>
+                    <option>Duplex</option>
+                    <option>Comercio</option>
+                </select>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="price-grid">
+            <div class="col-sm-6 price-top">
+                <h4>Ambientes</h4>
+                <select class="in-drop">
+                    <option>Todos</option>
+                    <option>1 ambiente</option>
+                    <option>2 ambientes</option>
+                    <option>3 ambientes</option>
+                    <option>4 ambientes</option>
+                    <option>4+ ambientes</option>
+                </select>
+            </div>
+            <div class="col-sm-6 price-top1">
+                <h4>Rango de precio</h4>
+                        <select class="in-drop">
+                            <option>Todos</option>
+                            <option>U$S 0 a 50.000</option>
+                            <option>U$S 50.000 a 100.000</option>
+                            <option>U$S 100.000 a superior</option>
+                        </select>
+            </div>
+           
+            <div class="clearfix"> </div>
+    </div>
+    </div>
+</div>
+
+<!---->
+<div class="container">
+    
+    <div class="buy-single">
+        <h3>Propiedades:</h3>
+        <div class="box-sin"> 
+            <div class="single-box">
+            {{#each props}}
+                <div class="col-sm-6 box-col">
+                     <div class=" col-sm-6 left-side ">
+                        <a href="single.html"> 
+                        {{#each this.imagenes}}
+                        {{url }}
+                        <img class="img-responsive" src="/public/images/sb.jpg" alt="">
+                        {{/each}}
+                        </a>
+                    </div>              
+                    <div class="col-sm-6 middle-side">
+                         <h4>{{titulo}}</h4>
+                         <p>{{imagenes.url}}</p>                         
+                         <p><span class="bath">Ciudad </span>: <span class="two">{{region.nombre}}</span></p>
+                         <p>  <span class="bath1">Ambientes </span>: <span class="two">2</span></p>
+                         <p><span class="bath2">Superficie Total</span>: <span class="two">85 m²</span></p>
+                         <p><span class="bath5">Precio </span>:<span class="two"> U$S 85.000</span></p>               
+                        <div class="right-side">
+                             <a href="contact.html" class="hvr-sweep-to-right more">Ver detalle</a>     
+                         </div>
+                     </div>
+                 <div class="clearfix"> </div>
+                </div>
+            {{/each}}
+            </div>
+        </div>
+        
+        <div class="clearfix"> </div>
+        <div class="nav-page">
+        <nav>
+      <ul class="pagination">
+        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+     </ul>
+   </nav>
+   </div>
+        </div>
+        
+    </div>
+    
+</div>
