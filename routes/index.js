@@ -13,9 +13,9 @@ function restrictToAdmins(req, res, next) {
 keystone.pre('routes', function(req, res, next) {
 	res.locals.navLinks = [
 		{ label: 'Home', key: 'home', href: '/' },
-		{ label: 'Blog', key: 'blog', href: '/blog' },
-		{ label: 'Gallery', key: 'gallery', href: '/gallery' },
-		{ label: 'Contact', key: 'contact', href: '/contact' }
+		{ label: 'Props', key: 'props', href: '/Propiedades' },
+		{ label: 'AboutUs', key: 'aboutUs', href: '/Sobre-nosotros' },
+		{ label: 'Contact', key: 'contact', href: '/contacto' }
 	];
 
 	res.locals.user = req.user;
@@ -54,15 +54,8 @@ exports = module.exports = function(app) {
 
 	// Views
 	app.get('/', routes.views.index);
-	app.get('/blog/:category?', routes.views.blog);
-	app.all('/blog/post/:post', routes.views.post);
-	app.get('/gallery', routes.views.gallery);
-	app.all('/contact', routes.views.contact);
-
-	// Downloads
-	app.get('/download/users', routes.download.users);
-
-	// API
-	//app.all('/api*', keystone.initAPI);
+	app.get('/Propiedades/:category?', routes.views.props);
+	app.get('/Sobre-nosotros', routes.views.aboutUs);
+	app.all('/contacto', routes.views.contact);
 
 }
