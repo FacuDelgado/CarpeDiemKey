@@ -1,6 +1,6 @@
 {
   "name": "CarpeDiemKeystone-Site",
-  "main": "index.js",
+  "main": "app.js",
   "version": "0.0.1",
   "dependencies": {
     "keystone": "~0.1.55",
