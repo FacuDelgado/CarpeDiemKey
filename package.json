@@ -1,5 +1,6 @@
 {
   "name": "CarpeDiemKeystone-Site",
+  "main": "index.js",
   "version": "0.0.1",
   "dependencies": {
     "keystone": "~0.1.55",
@@ -14,8 +15,8 @@
     "node": ">=0.12.7"
   },
   "scripts": {
-    "monitor": "nodemon server.js",
-    "start": "server.js",
+    "monitor": "nodemon app.js",
+    "start": "app.js",
     "deploy": "gcloud preview app deploy app.yaml"
   }
 }
