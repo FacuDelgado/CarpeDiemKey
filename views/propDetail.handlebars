@@ -1,0 +1,70 @@
+    <div class="container">
+<h1>{{data.prop.titulo}}</h1>
+<h1>{{data.prop.region.nombre}}</h1>
+        <div class="buy-single-single">
+
+            <div class="col-md-12 single-box">
+
+                <div class=" buying-top">
+                    <div class="flexslider">
+                        <ul class="slides">
+                         	{{#each data.prop.imagenes}}
+                      		<li data-thumb="{{this.url}}">
+                                <img src="{{this.url}}" />
+                            </li>
+                      		{{/each}}
+                        </ul>
+                    </div>
+                    <!-- FlexSlider -->
+                    <script defer src="/js/jquery.flexslider.js"></script>
+                    <link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="screen" />
+
+                    <script>
+                        // Can also be used with $(document).ready()
+                        $( window ).load( function () {
+                            $( '.flexslider' ).flexslider( {
+                                animation: "slide",
+                                controlNav: "thumbnails"
+                            } );
+                        } );
+                    </script>
+                </div>
+                <div class="buy-sin-single">
+                    <div class="col-sm-5 middle-side immediate">
+                        <h4>Datos principales:</h4>
+                         <p>  <span class="bath1">Tipo de propiedad </span>: <span class="two">{{data.prop.tipo}}</span></p>
+                        <p><span class="bath">Ambientes </span>: <span class="two">{{data.prop.ambientes}}</span></p>
+                        <p><span class="bath3">Baños </span>:<span class="two"> {{data.prop.baños}}</span></p>
+                        <p><span class="bath2">Superficie total</span>: <span class="two">{{data.prop.superficie}} M²</span></p>
+                        <p><span class="bath5">Precio </span>:<span class="two"> 30-40 Lacs</span></p>
+                        <div class="   right-side">
+                            <a href="contact.html" class="hvr-sweep-to-right more">Contacto</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-7 buy-sin">
+                        <h4>Descripcion</h4>
+                        {{{data.prop.descripcion}}}
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="map-buy-single">
+                    <h4>Ubicacion</h4>
+                    <div class="map-buy-single1">
+                        <iframe
+						  width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBNHlYeLXK-jScodWhk9GSMh-1yrJth12g&q={{data.prop.latitud}},{{data.prop.longitud}}" allowfullscreen>
+						</iframe>
+
+                    </div>
+                </div>
+                <br>
+                <!-- <div class="video-pre">
+                    <h4>Video Presentation</h4>
+                    <iframe src="https://player.vimeo.com/video/63931426" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+                </div> -->
+            </div>
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>

@@ -6,7 +6,7 @@ var keystone = require("keystone");
 var Types = keystone.Field.Types;
 
 // initialise the model
-var Region = new keystone.List("Regions", {
+var Region = new keystone.List("Region", {
     map: { name: "nombre" },
     defaultColumns: "titulo",
     label: "Region"
@@ -24,6 +24,8 @@ Region.add({
         label: "Descripcion"
     }
 });
+
+Region.relationship({ ref: 'Prop', path: 'region' });
 
 
 // register the model with keystone

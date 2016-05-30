@@ -8,8 +8,8 @@ var Prop = new keystone.List('Prop', {
 
 Prop.add({
 	titulo: { type: Types.Text, required: true, label: "Titulo", index: true  },
-	descripcion: { type: Types.Html, label: "Descripcion", index: true  },
-	region: { type: Types.Relationship, ref: 'Region', label: "Zona de ubicacion"},
+	descripcion: { type: Types.Html, label: "Descripcion", wysiwyg: true, index: true  },
+	region: { type: Types.Relationship, ref: 'Region', label: "Zona de ubicacion", index: true },
 	tipo: { type: Types.Select, options: 'Casa, Departamento, Duplex, PH, Casa quinta, Local comercial', default: 'Casa', label: "Tipo de vivienda", index: true },
 	fechaPublicacion: { type: Types.Date, index: true, label: "Fecha de publicacion" },
 	imagenes: { type: Types.CloudinaryImages, folder: 'path/to/image', label: "Imagenes de la propiedad" },

@@ -45,7 +45,6 @@ keystone.set('404', function(req, res, next) {
 
 // Load Routes
 var routes = {
-	//api: importRoutes('./api'),
 	download: importRoutes('./download'),
 	views: importRoutes('./views')
 };
@@ -54,7 +53,8 @@ exports = module.exports = function(app) {
 
 	// Views
 	app.get('/', routes.views.index);
-	app.get('/Propiedades/:category?', routes.views.props);
+	app.get('/Propiedades', routes.views.props);
+	app.get('/Propiedades/:prop', routes.views.propDetail);
 	app.get('/Sobre-nosotros', routes.views.aboutUs);
 	app.all('/contacto', routes.views.contact);
 

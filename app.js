@@ -50,7 +50,7 @@ keystone.init({
 	'mongo':'mongodb://carpediem:carpediem1@ds011933.mlab.com:11933/carpediem',
 
 	'session': true,
-	'auth': true,
+	'auth': false,
 	'user model': 'User',
 	'cookie secret': process.env.COOKIE_SECRET || 'demo',
 
@@ -78,7 +78,7 @@ keystone.set('locals', {
 keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
-	'posts': ['props'],
+	'Lista de Propiedades': ['props'],
 	'Regiones': 'regions',
 	'users': 'users'
 });
